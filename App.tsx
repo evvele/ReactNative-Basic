@@ -1,21 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar, SafeAreaView } from "react-native";
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+
+import myStyle from "./src/styles/global";
+import { View, Text } from "react-native";
+
+import { 
+  FirstBasic, 
+  UseState, 
+  CustomComponent, 
+  TextInputHandler, 
+  ScrollViewHandler, 
+  FlatListHandler, 
+  HorizontalSwaper,
+  GestureScreenBad,
+  GestureGood,
+  ScrollCarouselAuto,
+} from "./src/reduce/AllTutorials";
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+      <SafeAreaView>
+        <StatusBar barStyle="dark-content"  />
+        {/* <FirstBasic /> */}
+        {/* <Cafe /> */}
+        {/* <UseState /> */}
+        {/* <TextInputHandler   /> */}
+        {/* <ScrollViewHandler  /> */}
+        {/* <FlatListHandler  /> */}
+        {/* <HorizontalSwaper /> */}
+        {/* <GestureScreenBad  /> */}
+        {/* <GestureGood  /> */}
+        <ScrollCarouselAuto />
+      </SafeAreaView>
+
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
